@@ -1,0 +1,63 @@
+.header-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.header-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./1184118.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    filter: blur(1.5px); /* Aplica un difuminado de 5px */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff; /* Texto en blanco */
+    max-width: 600px;
+  }
+  
+  .overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay p {
+    font-size: 1.5rem;
+  }
+  .scroll-button {
+    background-color: #2d3035;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scroll-button:hover {
+    transform: scale(1.1);
+    background-color: #4c5f7a;
+  }
+  
+  .scroll-button:active {
+    transform: scale(0.95);
+  }
+  

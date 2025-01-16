@@ -1,0 +1,84 @@
+/* AboutGeneral.css */
+
+/* Contenedor principal para cualquier sección */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .about-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #58a6ff;
+  }
+  
+  /* Contenedor de la lista (estudios/lenguajes) */
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Logos */
+  .item-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Asegura que el logo se adapte al contenedor */
+    border: 2px solid #58a6ff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .item-logo:hover {
+    transform: scale(1.1);
+    background-color: #58a6ff;
+  }
+  
+  /* Información oculta por defecto */
+  .hidden-info {
+    display: none;
+    position: absolute;
+    top: 4rem; /* Ajusta según diseño */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0d1117;
+    color: #e1e7ed;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .hidden-info::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent #0d1117 transparent;
+  }
+  
+  /* Mostrar la información al pasar el mouse */
+  .item:hover .hidden-info {
+    display: block;
+  }
+  
