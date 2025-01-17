@@ -1,4 +1,4 @@
-//import './index.css'
+import './global.css'
 import { Header, About } from './components'
 
 function App() {
@@ -7,7 +7,6 @@ function App() {
       <main>
         <Header />
         <About />
-
       </main>
     </>
   )
