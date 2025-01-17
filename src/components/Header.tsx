@@ -11,7 +11,6 @@ const Header: FC = () => {
   return (
     <section
       id="header"
-      // Contenedor principal que ocupa toda la pantalla
       className="
         relative
         w-full
@@ -22,7 +21,6 @@ const Header: FC = () => {
         overflow-hidden
       "
     >
-      {/* Imagen de fondo con blur (usando style inline para backgroundImage) */}
       <div
         className="
           absolute 
@@ -50,7 +48,7 @@ const Header: FC = () => {
         "
       >
         <h2 className="text-4xl mb-4">Alexander Gonzalez</h2>
-        <p className="text-2xl mb-6">Software Engineer | Full Stack Developer</p>
+        <p className="text-2xl mb-6">Full Stack Developer</p>
         <button
           onClick={handleScroll}
           className="

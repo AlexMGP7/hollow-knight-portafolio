@@ -7,32 +7,32 @@ export interface Tools {
 export const tools: Tools[] = [
   {
     id: 1,
-    logo: "/src/assets/logos/jira.png",
+    logo: "/src/assets/logos/jira.svg",
     name: "Jira",
   },
   {
     id: 2,
-    logo: "/src/assets/logos/vscode.png",
+    logo: "/src/assets/logos/vscode.svg",
     name: "VSCode",
   },
   {
     id: 3,
-    logo: "/src/assets/logos/github.png",
+    logo: "/src/assets/logos/github.svg",
     name: "Github",
   },
   {
     id: 4,
-    logo: "/src/assets/logos/git.png",
+    logo: "/src/assets/logos/git.svg",
     name: "git",
   },
   {
     id: 5,
-    logo: "/src/assets/logos/debian.png",
+    logo: "/src/assets/logos/debian.svg",
     name: "debian",
   },
   {
     id: 6,
-    logo: "/src/assets/logos/postman.png",
+    logo: "/src/assets/logos/postman.svg",
     name: "postman",
   },
 ];
