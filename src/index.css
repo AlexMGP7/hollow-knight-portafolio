@@ -1,3 +1,9 @@
+/* Importa las bases de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuente personalizada */
 @font-face {
   font-family: 'TrajanPro';
   src: url('./assets/fonts/trajan-pro-regular_0fSMe/HN.ttf') format('truetype');
@@ -5,29 +11,10 @@
   font-style: normal;
 }
 
+/* Aplica la fuente personalizada y el cursor */
 body {
+  @apply bg-gray-900 text-gray-100 font-sans;
   margin: 0;
   font-family: 'TrajanPro', sans-serif;
-  background-color: #0d1117;
-  color: #e1e7ed;
-  cursor: url('./cursor.cur'), auto; /* Cambia el cursor */
-}
-
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.project-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 4px;
+  cursor: url('./cursor.cur'), auto;
 }

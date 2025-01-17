@@ -1,5 +1,5 @@
 import './App.css'
-import { Header, About, Projects } from './components'
+import { Header, About } from './components'
 
 function App() {
   return (

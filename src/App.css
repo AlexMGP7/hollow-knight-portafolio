@@ -1,13 +1,4 @@
-/* Ejemplo de estilos que afecten directamente tu App */
 
-.header, .footer {
+.header {
   padding: 1rem 2rem;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
 }
