@@ -1,7 +1,8 @@
-/* Importa las bases de Tailwind */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 /* Fuente personalizada */
 @font-face {
@@ -18,3 +19,6 @@ body {
   font-family: 'TrajanPro', sans-serif;
   cursor: url('./cursor.cur'), auto;
 }
+
+
+

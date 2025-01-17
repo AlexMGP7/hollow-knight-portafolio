@@ -1,4 +1,4 @@
-import './App.css'
+//import './index.css'
 import { Header, About } from './components'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
       <main>
         <Header />
         <About />
-        {/* <Projects /> */}
+
       </main>
     </>
   )

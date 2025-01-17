@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import './Header.css';
+//import './Header.css';
 
 const Header: FC = () => {
   const handleScroll = () => {
@@ -12,7 +12,7 @@ const Header: FC = () => {
   return (
     <section id="header" className="header-container">
       <div className="overlay">
-        <h2>Alexander Gonzalez</h2>
+        <h2 className=''>Alexander Gonzalez</h2>
         <p>Software Engineer | Full Stack Developer</p>
         <button className="scroll-button" onClick={handleScroll}>
           ↓ Más sobre mi ↓
