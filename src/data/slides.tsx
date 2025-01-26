@@ -3,7 +3,7 @@ export const slides = [
         id: 1,
         title: "Alexander Gonzalez",
         subtitle: "FullStack Developer",
-        image: "/hk.jpg",
+        image: "/logos/hk.jpg",
     },
     {
         id: 2,

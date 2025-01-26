@@ -7,17 +7,17 @@ export interface Study {
   export const studies: Study[] = [
     {
       id: 1,
-      logo: '/src/assets/logos/UDO.png',
+      logo: '/logos/UDO.png',
       name: 'Lic. En Informática - Universidad de Oriente (2021 - actualidad)',
     },
     {
       id: 2,
-      logo: '/src/assets/logos/freecodecamp.svg',
+      logo: '/logos/freecodecamp.svg',
       name: 'Certificación en Desarrollo Web y en JS - FreeCodeCamp',
     },
     {
       id: 3,
-      logo: '/src/assets/logos/udemy.png',
+      logo: '/logos/udemy.png',
       name: 'Desarrollo Web - Udemy',
     },
   ];

@@ -7,47 +7,47 @@ export interface Tools {
 export const tools: Tools[] = [
   {
     id: 10, 
-    logo: "/src/assets/logos/mysql.svg",
+    logo: "/logos/mysql.svg",
     name: "MySQL",
   },
   {
     id: 11, 
-    logo: "/src/assets/logos/firebase.svg",
+    logo: "/logos/firebase.svg",
     name: "Firebase",
   },
   {
     id: 5,
-    logo: "/src/assets/logos/postman.svg",
+    logo: "/logos/postman.svg",
     name: "postman",
   },
   {
     id: 1,
-    logo: "/src/assets/logos/jira.svg",
+    logo: "/logos/jira.svg",
     name: "Jira",
   },
   {
     id: 2,
-    logo: "/src/assets/logos/vscode.svg",
+    logo: "/logos/vscode.svg",
     name: "VSCode",
   },
   {
     id: 3,
-    logo: "/src/assets/logos/github.svg",
+    logo: "/logos/github.svg",
     name: "Github",
   },
   {
     id: 4,
-    logo: "/src/assets/logos/git.svg",
+    logo: "/logos/git.svg",
     name: "git",
   },
   {
     id: 6, 
-    logo: "/src/assets/logos/docker.svg",
+    logo: "/logos/docker.svg",
     name: "Docker",
   },
   {
     id: 7,
-    logo: "/src/assets/logos/debian.svg",
+    logo: "/logos/debian.svg",
     name: "debian",
   },
 ];

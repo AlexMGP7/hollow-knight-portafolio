@@ -7,53 +7,53 @@ export interface Language {
 export const languages: Language[] = [
   {
     id: 1, 
-    logo: "/src/assets/logos/react.svg",
+    logo: "/logos/react.svg",
     name: "React",
   },
   {
     id: 2, 
-    logo: "/src/assets/logos/javascript.png",
+    logo: "/logos/javascript.png",
     name: "JavaScript",
   },
   {
     id: 3, 
-    logo: "/src/assets/logos/typescript.png",
+    logo: "/logos/typescript.png",
     name: "TypeScript",
   },
   {
     id: 4, 
-    logo: "/src/assets/logos/nodejs.svg",
+    logo: "/logos/nodejs.svg",
     name: "Node.js",
   },
   {
     id: 5, 
-    logo: "/src/assets/logos/tailwindcss.svg",
+    logo: "/logos/tailwindcss.svg",
     name: "Tailwind CSS",
   },
   {
     id: 6, 
-    logo: "/src/assets/logos/bootstrap.svg",
+    logo: "/logos/bootstrap.svg",
     name: "Bootstrap",
   },
   {
     id: 7, 
-    logo: "/src/assets/logos/cakephp.svg",
+    logo: "/logos/cakephp.svg",
     name: "CakePHP",
   },
   {
     id: 8,
-    logo: "/src/assets/logos/php.svg",
+    logo: "/logos/php.svg",
     name: "PHP",
   },
   {
     id: 9, 
-    logo: "/src/assets/logos/sql.svg",
+    logo: "/logos/sql.svg",
     name: "SQL",
   },
 
   {
     id: 12, 
-    logo: "/src/assets/logos/mongodb.svg",
+    logo: "/logos/mongodb.svg",
     name: "MongoDB",
   },
 
