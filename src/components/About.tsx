@@ -3,7 +3,6 @@ import { languages } from "../data/languages";
 import { tools } from "../data/tools";
 import { studies } from '../data/studies';
 
-
 interface SectionProps {
   title: string;
   items: Array<{
@@ -16,8 +15,7 @@ interface SectionProps {
 const AboutSection: FC<SectionProps> = ({ title, items }) => {
   return (
     <div className="flex flex-col items-center text-center pt-4 pb-8 w-full">
-      {/* Ajuste del padding */}
-      <h3 className="text-2xl font-semibold mb-4 text-blue-300">{title}</h3>
+      <h3 className="text-2xl font-semibold sm:mt-5 mb-5 text-blue-300">{title}</h3>
       <div className="flex flex-wrap gap-6 justify-center">
         {items.map((item) => (
           <div
@@ -51,7 +49,7 @@ const About: FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col text-center px-4 sm:px-8" 
+      className="flex flex-col text-center px-4 sm:px-8"
     >
       <AboutSection title="Estudios" items={studies} />
       <AboutSection title="Lenguajes & Tecnologías" items={languages} />

@@ -158,7 +158,7 @@ const Header: FC = () => {
       </div>
       {/* Slider Controls */}
       <div
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-8 text-white/80"
+        className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex items-center gap-8 text-white/80"
       >
         <button
           onClick={() => handleSliderScroll("prev")}
