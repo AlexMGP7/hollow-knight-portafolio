@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { languages } from "../data/languages";
 import { tools } from "../data/tools";
-import { studies } from '../data/studies';
+import { studies } from "../data/studies";
 
 interface SectionProps {
   title: string;
@@ -14,9 +14,15 @@ interface SectionProps {
 
 const AboutSection: FC<SectionProps> = ({ title, items }) => {
   return (
-    <div className="flex flex-col items-center text-center pt-4 pb-8 w-full">
-      <h3 className="text-2xl font-semibold sm:mt-5 mb-5 text-blue-300">{title}</h3>
-      <div className="flex flex-wrap gap-6 justify-center">
+    <div className="flex flex-col items-center text-center pt-6 pb-8 w-full max-w-screen-lg mx-auto">
+      <h3 className="text-2xl font-semibold mb-6 text-blue-300">{title}</h3>
+      {/**
+       * flex-wrap: permite que los elementos se ajusten automáticamente
+       * gap-6: crea un espacio uniforme entre los elementos
+       * justify-center: alinea horizontalmente
+       * items-center: asegura la alineación vertical
+       */}
+      <div className="flex flex-wrap gap-6 justify-center items-center">
         {items.map((item) => (
           <div
             key={item.id}
@@ -31,7 +37,7 @@ const AboutSection: FC<SectionProps> = ({ title, items }) => {
               className="w-12 h-12 sm:w-16 sm:h-16 object-contain p-2 transition-transform duration-700 ease-in-out transform group-hover:scale-105"
             />
             <div
-              className="hidden absolute top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-gray-200 p-2 sm:p-3 rounded-lg shadow-lg text-xs sm:text-sm max-w-xs text-center z-10 group-hover:block"
+              className="hidden absolute top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-gray-200 p-2 rounded-lg shadow-lg text-xs sm:text-sm max-w-xs text-center z-10 group-hover:block"
             >
               {item.name}
               <div
@@ -49,7 +55,7 @@ const About: FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col text-center px-4 sm:px-8"
+      className="flex flex-col justify-center items-center min-h-screen text-center px-4 sm:px-8 lg:px-16"
     >
       <AboutSection title="Estudios" items={studies} />
       <AboutSection title="Lenguajes & Tecnologías" items={languages} />
