@@ -31,7 +31,12 @@ export const tools: Tools[] = [
     name: "postman",
   },
   {
-    id: 6,
+    id: 6, 
+    logo: "/src/assets/logos/docker.svg",
+    name: "Docker",
+  },
+  {
+    id: 7,
     logo: "/src/assets/logos/debian.svg",
     name: "debian",
   },
