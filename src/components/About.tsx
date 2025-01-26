@@ -1,8 +1,8 @@
-import type { FC } from 'react';
+import type { FC } from "react";
+import { languages } from "../data/languages";
+import { tools } from "../data/tools";
 import { studies } from '../data/studies';
-import { languages } from '../data/languages';
-import { technology } from '../data/technology';
-import { tools } from '../data/tools';
+
 
 interface SectionProps {
   title: string;
@@ -15,7 +15,7 @@ interface SectionProps {
 
 const AboutSection: FC<SectionProps> = ({ title, items }) => {
   return (
-    <div className="flex flex-col items-center text-center p-8">
+    <div className="flex flex-col items-center text-center pt-4 pb-8"> {/* Ajuste del padding */}
       <h3 className="text-2xl font-semibold mb-4 text-blue-400">{title}</h3>
       <div className="flex flex-wrap gap-6 justify-center">
         {items.map((item) => (
@@ -23,10 +23,13 @@ const AboutSection: FC<SectionProps> = ({ title, items }) => {
             key={item.id}
             className="relative flex flex-col items-center cursor-pointer group"
           >
+            <div
+              className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-600 blur-lg opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none"
+            ></div>
             <img
               src={item.logo}
               alt={item.name}
-              className="w-16 h-16 object-contain border-2 border-blue-400 rounded-full p-2 transition-transform transform group-hover:scale-110"
+              className="w-16 h-16 object-contain p-2 transition-transform transform group-hover:scale-110"
               title={item.name}
             />
             <div
@@ -48,11 +51,10 @@ const About: FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center text-center p-8"
+      className="flex flex-col text-center px-8" // Ajuste: Eliminamos `items-center` y `justify-center`
     >
       <AboutSection title="Estudios" items={studies} />
-      <AboutSection title="Lenguajes" items={languages} />
-      <AboutSection title="Tecnologias" items={technology} />
+      <AboutSection title="Lenguajes & Tecnologías" items={languages} />
       <AboutSection title="Herramientas" items={tools} />
     </section>
   );

@@ -27,12 +27,12 @@ export const tools: Tools[] = [
   },
   {
     id: 5,
-    logo: "/src/assets/logos/debian.svg",
-    name: "debian",
+    logo: "/src/assets/logos/postman.svg",
+    name: "postman",
   },
   {
     id: 6,
-    logo: "/src/assets/logos/postman.svg",
-    name: "postman",
+    logo: "/src/assets/logos/debian.svg",
+    name: "debian",
   },
 ];
