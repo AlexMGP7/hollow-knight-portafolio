@@ -50,16 +50,7 @@ export const languages: Language[] = [
     logo: "/src/assets/logos/sql.svg",
     name: "SQL",
   },
-  {
-    id: 10, 
-    logo: "/src/assets/logos/mysql.svg",
-    name: "MySQL",
-  },
-  {
-    id: 11, 
-    logo: "/src/assets/logos/firebase.svg",
-    name: "Firebase",
-  },
+
   {
     id: 12, 
     logo: "/src/assets/logos/mongodb.svg",

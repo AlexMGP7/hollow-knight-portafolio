@@ -6,6 +6,21 @@ export interface Tools {
 
 export const tools: Tools[] = [
   {
+    id: 10, 
+    logo: "/src/assets/logos/mysql.svg",
+    name: "MySQL",
+  },
+  {
+    id: 11, 
+    logo: "/src/assets/logos/firebase.svg",
+    name: "Firebase",
+  },
+  {
+    id: 5,
+    logo: "/src/assets/logos/postman.svg",
+    name: "postman",
+  },
+  {
     id: 1,
     logo: "/src/assets/logos/jira.svg",
     name: "Jira",
@@ -24,11 +39,6 @@ export const tools: Tools[] = [
     id: 4,
     logo: "/src/assets/logos/git.svg",
     name: "git",
-  },
-  {
-    id: 5,
-    logo: "/src/assets/logos/postman.svg",
-    name: "postman",
   },
   {
     id: 6, 

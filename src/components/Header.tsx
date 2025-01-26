@@ -13,7 +13,7 @@ const Header: FC = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/assets/cv/Alexander_Gonzalez_CV.pdf"; // Ruta del archivo PDF
+    link.href = "/Alexander_Gonzalez_CV.pdf"; 
     link.download = "Alexander_Gonzalez_CV.pdf";
     document.body.appendChild(link);
     link.click();
