@@ -16,12 +16,6 @@ const AboutSection: FC<SectionProps> = ({ title, items }) => {
   return (
     <div className="flex flex-col items-center text-center pt-6 pb-8 w-full max-w-screen-lg mx-auto">
       <h3 className="text-2xl font-semibold mb-6 text-blue-300">{title}</h3>
-      {/**
-       * flex-wrap: permite que los elementos se ajusten automáticamente
-       * gap-6: crea un espacio uniforme entre los elementos
-       * justify-center: alinea horizontalmente
-       * items-center: asegura la alineación vertical
-       */}
       <div className="flex flex-wrap gap-6 justify-center items-center">
         {items.map((item) => (
           <div
