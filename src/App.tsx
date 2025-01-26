@@ -1,12 +1,11 @@
 import './global.css'
-import { Header, About } from './components'
+import { Header } from './components'
 
 function App() {
   return (
     <>
       <main>
         <Header />
-        <About />
       </main>
     </>
   )

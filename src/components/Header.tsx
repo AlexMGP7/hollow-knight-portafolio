@@ -13,7 +13,7 @@ const Header: FC = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Alexander_Gonzalez_CV.pdf"; 
+    link.href = "/Alexander_Gonzalez_CV.pdf";
     link.download = "Alexander_Gonzalez_CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -92,14 +92,15 @@ const Header: FC = () => {
     <section
       id="header"
       className="
-        relative
-        w-full
-        h-screen
-        flex
-        items-center
-        justify-center
-        overflow-hidden
-      "
+    relative
+    w-full
+    h-screen
+    flex
+    items-start sm:items-center
+    justify-start sm:justify-center
+    overflow-hidden
+    px-4 sm:px-0
+  "
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -117,28 +118,29 @@ const Header: FC = () => {
           ) : (
             <div
               key={slide.id}
-              className="relative h-screen w-full flex items-center justify-center"
+              className="relative h-screen w-full flex flex-col justify-start sm:justify-center sm:items-center"
               style={{
                 backgroundImage: `url(${slide.image || "/placeholder.svg"})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
+
               <motion.div
                 className="
-                  bg-black/60
-                  p-8
-                  rounded-lg
-                  text-center
-                  text-white
-                  max-w-xl
-                "
+              bg-black/60
+              p-6 sm:p-8
+              rounded-lg
+              text-left sm:text-center
+              text-white
+              max-w-xl
+            "
                 initial="hidden"
                 animate="visible"
                 variants={headerAnimation}
               >
-                <h2 className="text-4xl mb-4">{slide.title}</h2>
-                <p className="text-2xl mb-6">{slide.subtitle}</p>
+                <h2 className="text-3xl sm:text-4xl mb-3 sm:mb-4">{slide.title}</h2>
+                <p className="text-xl sm:text-2xl mb-4 sm:mb-6">{slide.subtitle}</p>
                 <motion.button
                   className="text-white border-b-2 border-white pb-2 flex items-center text-sm sm:text-lg hover:border-white/70 transition-colors"
                   initial="hidden"
@@ -154,7 +156,6 @@ const Header: FC = () => {
           )
         )}
       </div>
-
       {/* Slider Controls */}
       <div
         className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-8 text-white/80"
