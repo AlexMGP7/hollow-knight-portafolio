@@ -1,12 +1,12 @@
 import './global.css';
 import { Header } from './components';
-import Hornet from './components/Hornet';
+import HornetContainer from './components/Hornet/HornetContainer';
 
 function App() {
   return (
-    <main className="relative w-full min-h-screen bg-gray-900 text-white">
+    <main className="relative w-full min-h-screen">
       <Header />
-      <Hornet speed={120} />
+      <HornetContainer />
     </main>
   );
 }
