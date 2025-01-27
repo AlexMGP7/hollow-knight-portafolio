@@ -9,7 +9,19 @@ const Header: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [touchStartY, setTouchStartY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const downloadCV = () => {
     const link = document.createElement("a");
@@ -118,14 +130,17 @@ const Header: FC = () => {
           ) : (
             <div
               key={slide.id}
-              className="relative h-screen w-full flex flex-col justify-start sm:justify-center sm:items-center"
+              className={`relative h-screen w-full flex flex-col justify-start sm:justify-center sm:items-center ${
+                isMobile ? "mobile-background" : ""
+              }`}
               style={{
-                backgroundImage: `url(${slide.image || "/placeholder.svg"})`,
+                backgroundImage: `url(${
+                  isMobile && slide.mobileImage ? slide.mobileImage : slide.image
+                })`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-
               <motion.div
                 className="
               bg-black/60
