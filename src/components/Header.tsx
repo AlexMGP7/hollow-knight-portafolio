@@ -14,7 +14,7 @@ const Header: FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 640);
+      setIsMobile(window.innerWidth <= 1040);
     };
 
     handleResize(); // Check initial screen size
