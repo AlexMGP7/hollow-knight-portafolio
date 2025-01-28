@@ -6,6 +6,11 @@ export interface Language {
 
 export const languages: Language[] = [
   {
+    id: 11, 
+    logo: "/logos/nextjs.png", 
+    name: "Next.js",
+  },
+  {
     id: 1, 
     logo: "/logos/react.svg",
     name: "React",
@@ -49,12 +54,6 @@ export const languages: Language[] = [
     id: 9, 
     logo: "/logos/sql.svg",
     name: "SQL",
-  },
-
-  {
-    id: 12, 
-    logo: "/logos/mongodb.svg",
-    name: "MongoDB",
   },
 
 ];

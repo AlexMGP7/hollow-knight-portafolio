@@ -16,6 +16,11 @@ export const tools: Tools[] = [
     name: "Firebase",
   },
   {
+    id: 12, 
+    logo: "/logos/mongodb.svg",
+    name: "MongoDB",
+  },
+  {
     id: 5,
     logo: "/logos/postman.svg",
     name: "postman",
