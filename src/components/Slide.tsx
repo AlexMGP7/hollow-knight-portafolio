@@ -1,60 +1,51 @@
-import { FC } from "react";
+// Slide.tsx
+import React from "react";
 import { motion } from "framer-motion";
 import About from "./About";
-import Projects from "./Projects";
 import DownloadButton from "./DownloadButton";
-
-interface SlideData {
-  id: number;
-  title?: string;
-  description?: string;
-  imageUrl?: string;
-  content?: string;
-}
+import Projects from "./Projects";
+// (Asegúrate de importar o definir el tipo Slide según corresponda)
 
 interface SlideProps {
-  slide: SlideData;
+  slide: {
+    id: number;
+    title?: string;
+    description?: string;
+    imageUrl?: string;
+    mobileImageUrl?: string;
+    content: string;
+  };
   isMobile: boolean;
 }
 
-const Slide: FC<SlideProps> = ({ slide }) => {
+const Slide: React.FC<SlideProps> = ({ slide, isMobile }) => {
+  // Selecciona la imagen según el tamaño de pantalla y si se tiene definida la versión móvil
+  const bgImage =
+    isMobile && slide.mobileImageUrl ? slide.mobileImageUrl : slide.imageUrl;
 
-  // Slide "About"
   if (slide.content === "About") {
     return <About />;
   }
-
-  // Slide "Projects"
   if (slide.content === "Projects") {
     return <Projects />;
   }
 
-  // Slide normal
   return (
     <div
-      className="
-        relative
-        w-full
-        h-screen
-        flex
-        items-center
-        justify-center
-        bg-black
-      "
+      className="relative h-screen w-full flex flex-col justify-center items-center"
       style={{
-        // Si tienes imageUrl, usarlo:
-        backgroundImage: slide.imageUrl ? `url(${slide.imageUrl})` : undefined,
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       <motion.div
-        className="bg-black/60 p-6 sm:p-8 rounded-lg text-center text-white max-w-xl"
+        className="bg-black/60 p-6 rounded-lg text-white max-w-xl text-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
       >
-        <h2 className="text-3xl sm:text-4xl mb-3 sm:mb-4">{slide.title}</h2>
-        <p className="text-xl sm:text-2xl mb-4 sm:mb-6">{slide.description}</p>
+        <h2 className="text-3xl sm:text-4xl mb-3">{slide.title}</h2>
+        <p className="text-xl sm:text-2xl mb-4">{slide.description}</p>
         <DownloadButton />
       </motion.div>
     </div>

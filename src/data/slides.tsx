@@ -4,7 +4,8 @@ export const slides = [
     id: 1,
     title: "Alexander Gonzalez",
     description: "FullStack Developer",
-    imageUrl: "/logos/hkb.jpg",
+    imageUrl: "/logos/hkb.jpg",       // Imagen predeterminada
+    mobileImageUrl: "/logos/hkm.jpg",  // Imagen para móvil
     content: "Normal",
   },
   {
