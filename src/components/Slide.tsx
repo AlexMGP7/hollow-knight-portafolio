@@ -13,10 +13,11 @@ interface SlideProps {
     description?: string;
     imageUrl?: string;
     mobileImageUrl?: string;
-    content: string;
+    content?: string; // Ahora es opcional
   };
   isMobile: boolean;
 }
+
 
 const Slide: React.FC<SlideProps> = ({ slide, isMobile }) => {
   // Selecciona la imagen según el tamaño de pantalla y si se tiene definida la versión móvil
