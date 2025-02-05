@@ -1,8 +1,16 @@
-import { FC, useRef, useEffect, useState } from "react";
+import { FC, useRef, useEffect, useState, useCallback } from "react";
 import Slide from "./Slide";
 
+interface SlideData {
+  id: number;
+  title?: string;
+  description?: string;
+  imageUrl?: string;
+  content?: string;
+}
+
 interface SliderProps {
-  slides: Array<any>;
+  slides: SlideData[];
   currentSlide: number;
   setCurrentSlide: (index: number) => void;
   isMobile: boolean;
@@ -12,48 +20,49 @@ const Slider: FC<SliderProps> = ({ slides, currentSlide, setCurrentSlide, isMobi
   const sliderRef = useRef<HTMLDivElement>(null);
   const [startY, setStartY] = useState<number | null>(null);
 
-  const handleSliderScroll = (direction: "next" | "prev") => {
-    const newSlide =
-      direction === "next"
-        ? (currentSlide + 1) % slides.length
-        : (currentSlide - 1 + slides.length) % slides.length;
-    setCurrentSlide(newSlide);
-  };
+  const handleSliderScroll = useCallback(
+    (direction: "next" | "prev") => {
+      const newSlide =
+        direction === "next"
+          ? (currentSlide + 1) % slides.length
+          : (currentSlide - 1 + slides.length) % slides.length;
+      setCurrentSlide(newSlide);
+    },
+    [currentSlide, slides.length, setCurrentSlide]
+  );
 
   useEffect(() => {
     const slider = sliderRef.current;
+    if (!slider) return;
 
-    // Manejo de scroll con rueda de mouse
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       handleSliderScroll(e.deltaY > 0 ? "next" : "prev");
     };
 
-    // Manejo de eventos táctiles
     const handleTouchStart = (e: TouchEvent) => {
       setStartY(e.touches[0].clientY);
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       if (startY === null) return;
-
       const deltaY = e.touches[0].clientY - startY;
       if (Math.abs(deltaY) > 50) {
         handleSliderScroll(deltaY > 0 ? "prev" : "next");
-        setStartY(null); // Reinicia el toque después de un cambio
+        setStartY(null);
       }
     };
 
-    slider?.addEventListener("wheel", handleWheel, { passive: false });
-    slider?.addEventListener("touchstart", handleTouchStart, { passive: true });
-    slider?.addEventListener("touchmove", handleTouchMove, { passive: true });
+    slider.addEventListener("wheel", handleWheel, { passive: false });
+    slider.addEventListener("touchstart", handleTouchStart, { passive: true });
+    slider.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     return () => {
-      slider?.removeEventListener("wheel", handleWheel);
-      slider?.removeEventListener("touchstart", handleTouchStart);
-      slider?.removeEventListener("touchmove", handleTouchMove);
+      slider.removeEventListener("wheel", handleWheel);
+      slider.removeEventListener("touchstart", handleTouchStart);
+      slider.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [currentSlide, startY]);
+  }, [handleSliderScroll, startY]);
 
   return (
     <div
